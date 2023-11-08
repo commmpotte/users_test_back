@@ -26,8 +26,8 @@ The project structure is organized as follows:
 
 ## API Endpoints
 
-- POST `/users/register`: Register a new user.
-- POST `/users/login`: User login.
+- POST `/auth/register`: Register a new user.
+- POST `/auth/login`: User login.
 - GET `/users`: Get a list of users.
 - GET `/users/:id`: Get a specific user by ID.
 - PUT `/users/:id`: Update a user's details.
