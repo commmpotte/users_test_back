@@ -13,6 +13,46 @@ Before you begin, ensure you have met the following requirements:
 - npm or yarn installed
 - A text editor or an integrated development environment (IDE)
 
+## Project Structure
+
+The project structure is organized as follows:
+
+- `app.js`: Entry point of the application.
+- `controllers/`: Handles the business logic.
+- `models/`: Defines the MongoDB data models.
+- `validators/`: Request validation rules.
+- `utils/`: Utility functions.
+- `tests/`: Contains test cases.
+
+## API Endpoints
+
+- POST `/users/register`: Register a new user.
+- POST `/users/login`: User login.
+- GET `/users`: Get a list of users.
+- GET `/users/:id`: Get a specific user by ID.
+- PUT `/users/:id`: Update a user's details.
+- DELETE `/users/:id`: Delete a user.
+
+## Validation Rules
+
+The API enforces the following validation rules using Express Validator:
+
+- `username`: Must be a string, max 150 characters, and match the pattern `^[\w.@+-]+$`.
+- `password`: Must be a string, between 8 and 128 characters, and contain at least one uppercase letter and one digit.
+- `firstName` and `lastName`: Must be strings with a minimum length of 3 characters.
+
+## Error Handling
+
+The API uses custom error handling middleware to respond with meaningful error messages and status codes.
+
+## Authentication
+
+User authentication is implemented using JSON Web Tokens (JWT). Users are required to log in to access protected routes.
+
+## Database
+
+The API stores user data in a MongoDB database. It uses Mongoose to define the data schema and interact with the database.
+
 ## Installation
 
 1. Clone the repository:
@@ -48,53 +88,3 @@ Before you begin, ensure you have met the following requirements:
    ```
 
 The server will be running on `http://localhost:3000` by default.
-
-## Project Structure
-
-The project structure is organized as follows:
-
-- `app.js`: Entry point of the application.
-- `routes/`: Contains route definitions for the API.
-- `controllers/`: Handles the business logic.
-- `models/`: Defines the MongoDB data models.
-- `middlewares/`: Custom middleware functions.
-- `validators/`: Request validation rules.
-- `utils/`: Utility functions.
-- `tests/`: Contains test cases.
-
-## API Endpoints
-
-- POST `/users/register`: Register a new user.
-- POST `/users/login`: User login.
-- GET `/users`: Get a list of users.
-- GET `/users/:id`: Get a specific user by ID.
-- PUT `/users/:id`: Update a user's details.
-- DELETE `/users/:id`: Delete a user.
-
-## Validation Rules
-
-The API enforces the following validation rules using Express Validator:
-
-- `username`: Must be a string, max 150 characters, and match the pattern `^[\w.@+-]+$`.
-- `password`: Must be a string, between 8 and 128 characters, and contain at least one uppercase letter and one digit.
-- `firstName` and `lastName`: Must be strings with a minimum length of 3 characters.
-
-## Error Handling
-
-The API uses custom error handling middleware to respond with meaningful error messages and status codes.
-
-## Authentication
-
-User authentication is implemented using JSON Web Tokens (JWT). Users are required to log in to access protected routes.
-
-## Database
-
-The API stores user data in a MongoDB database. It uses Mongoose to define the data schema and interact with the database.
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
-Please make sure to update the sections with your specific project details and requirements.
