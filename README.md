@@ -1,6 +1,4 @@
-Certainly! Below is a sample README file for your backend project. You can customize it to include specific details about your project and its requirements.
 
-```markdown
 # Backend API for User Management System
 
 This is the backend API for a User Management System, which includes user registration, authentication, and user listing. It is built using Node.js, Express.js, and MongoDB.

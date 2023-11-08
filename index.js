@@ -15,10 +15,6 @@ import {
     UserController
 } from './controllers/index.js'
 
-// mongodb+srv://admin:wwwwww@cluster0.z3xly8z.mongodb.net/blog?retryWrites=true&w=majority
-// mongodb+srv://admin:admin@cluster1.67zyeye.mongodb.net/
-
-// mongoose.connect(process.env.MONGODB_URI).then(() => console.log('DB ok')).catch((err) => console.log('DB error', err))
 mongoose.connect(process.env.MONGODB_URI).then(() => console.log('DB ok')).catch((err) => console.log('DB error', err))
 // mongodb+srv://admin:admin@cluster1.67zyeye.mongodb.net/main
 
